@@ -21,6 +21,6 @@ defmodule Practice do
   end
 
   def palindrome(x) do
-    Practice.Palidrome.pan(x)
+    Practice.Palindrome.pan(x)
   end
 end
