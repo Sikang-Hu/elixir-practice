@@ -1,4 +1,4 @@
-defmodule Calc do
+defmodule Practice.Calc do
 
   @operators %{
     "+" => 1,
