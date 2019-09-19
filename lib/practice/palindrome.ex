@@ -7,7 +7,7 @@ defmodule Practice.Palindrome do
   def pan(str) do
     # This should handle +,-,*,/ with order of operations,
     # but doesn't need to handle parens.
-    expr
+    str
     |> String.split(~r/\s+/)
     |> hd
     |> parse_float

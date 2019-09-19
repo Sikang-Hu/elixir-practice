@@ -7,7 +7,7 @@ defmodule Practice.Factor do
   def fac(x) do
     # This should handle +,-,*,/ with order of operations,
     # but doesn't need to handle parens.
-    expr
+    x
     |> String.split(~r/\s+/)
     |> hd
     |> parse_float
