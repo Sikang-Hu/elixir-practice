@@ -1,24 +1,38 @@
 defmodule Practice.Factor do
-  def parse_float(text) do
-    {num, _} = Float.parse(text)
-    num
+
+  defp fac(1) do [1] end
+
+  defp fac(2) do [2] end
+
+  defp fac(3) do [3] end
+
+  defp fac(x) do 
+    case find_fac(x, 2, sqrt(x)) do 
+        {f, q} -> [f | fac(q)]
+        -1 -> [x]
+    end
   end
 
-  def fac(x) do
-    # This should handle +,-,*,/ with order of operations,
-    # but doesn't need to handle parens.
-    x
-    |> String.split(~r/\s+/)
-    |> hd
-    |> parse_float
-    |> :math.sqrt()
+  defp find_fac(num, f, lim) do 
+    if f > lim do
+        -1
+    else
+        case rem(num, f) do
+            0 -> {f, div(num, f)}
+            _ -> find_fac(num, f + 1, lim)
+        end
+    end
+  end
 
-    # Hint:
-    # expr
-    # |> split
-    # |> tag_tokens  (e.g. [+, 1] => [{:op, "+"}, {:num, 1.0}]
-    # |> convert to postfix
-    # |> reverse to prefix
-    # |> evaluate as a stack calculator using pattern matching
+  defp sqrt(x) do 
+    x
+    |> :math.sqrt()
+    |> trunc()
+  end
+
+  def factor(x) do
+    x
+    |> fac
+    |> Enum.sort
   end
 end
