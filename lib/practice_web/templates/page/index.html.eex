@@ -23,7 +23,7 @@
     <h2>Prime Factors</h2>
 
     <%= form_for @conn, "/factor", fn f -> %>
-      <p>Enter number: <%= text_input f, :x %></p>
+      <p>Enter a natural number: <%= text_input f, :num, placeholder: "255" %></p>
       <p><%= submit "Factor It" %></p>
     <% end %>
   </div>
@@ -31,7 +31,7 @@
     <h2>Palindrome</h2>
 
     <%= form_for @conn, "/palindrome", fn f -> %>
-      <p>Enter number: <%= text_input f, :x %></p>
+      <p>Enter a string: <%= text_input f, :str, placeholder: "abba" %></p>
       <p><%= submit "Check Palindrome" %></p>
     <% end %>
   </div>

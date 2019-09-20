@@ -1,9 +1,9 @@
 <div class="row">
   <div class="column">
     <p><%= link "← go back", to: "/" %></p>
-    <h2>Double Results</h2>
+    <h2>Palindrome?</h2>
 
-    <p>x = <%= @x %></p>
-    <p>2 * x = <%= @y %></p>
+    <p>Given String: <%= @x %> </p>
+    <p>Palindrome?: <%= @y %></p>
   </div>
 </div>

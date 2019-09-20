@@ -16,13 +16,13 @@ defmodule PracticeWeb.PageController do
     render conn, "calc.html", expr: expr, y: y
   end
 
-  def factor(conn, %{"x" => x}) do
+  def factor(conn, %{"num" => x}) do
     {x, _} = Integer.parse(x)
     y = Practice.factor(x)
     render conn, "factor.html", x: x, y: y
   end
 
-  def palindrome(conn, %{"x" => x}) do
+  def palindrome(conn, %{"str" => x}) do
     y = Practice.palindrome(x)
     render conn, "palindrome.html", x: x, y: y
   end

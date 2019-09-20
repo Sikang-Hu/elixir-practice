@@ -37,10 +37,10 @@ defmodule Practice.Calc do
                 postfix(expr, [head], acc ++ stack)
             end
         @operators[head] == 2 -> 
-            if @operators[hd(stack)] == 2 do 
-                postfix(expr, [head], acc ++ stack)
-            else 
-                postfix(expr, [head | stack], acc)
+            cond do
+                Enum.empty?(stack) -> postfix(expr, [head | stack], acc)
+                @operators[hd(stack)] == 2 -> postfix(expr, [head], acc ++ stack)
+                @operators[hd(stack)] == 1 -> postfix(expr, [head | stack], acc)
             end
     end
   end
