@@ -22,7 +22,7 @@ defmodule PracticeWeb.PageControllerTest do
   end
 
   test "check palindrome? ababa", %{conn: conn} do
-    conn = post conn, "/factor", %{"str" => "ababa"}
+    conn = post conn, "/palindrome", %{"str" => "ababa"}
     assert html_response(conn, 200) =~ "true"
   end
 end
