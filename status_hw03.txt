@@ -1,0 +1,36 @@
+Please fill in answers to the questions below:
+
+
+1. What's your name?
+Sikang Hu
+
+2. What hostname did you deploy to?
+hw03.sikang.site
+
+3. What's the URL of your git repo?
+https://github.com/Sikang-Hu/elixir-practice
+
+4. How much of the functionality did you complete?
+All the functionality
+
+5. Did you successfully deploy? If not, what's broken?
+Yes, at hw03.sikang.site
+
+6. How comfortable do you feel with Elixir now?
+Still not good
+
+7. Which parts of this assignment did you have trouble with, if any?
+Uncomfortable with pattern matching, functional programming thinking
+The deploy process
+
+
+
+And here's a list of tasks for grading comments. Just leave this here:
+ - Task 1
+ - Task 2
+ - Task 3
+ - Task 4
+ - Task 5
+ - Task 6
+ - Task 7
+ - Task 8
