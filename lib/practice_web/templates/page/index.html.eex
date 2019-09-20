@@ -23,7 +23,7 @@
     <h2>Prime Factors</h2>
 
     <%= form_for @conn, "/factor", fn f -> %>
-      <p>Enter a natural number: <%= text_input f, :num, placeholder: "255" %></p>
+      <p>Enter a natural number: <%= text_input f, :x, placeholder: "255" %></p>
       <p><%= submit "Factor It" %></p>
     <% end %>
   </div>

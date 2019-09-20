@@ -34,5 +34,6 @@ defmodule Practice.Factor do
     x
     |> fac
     |> Enum.sort
+    |> inspect
   end
 end

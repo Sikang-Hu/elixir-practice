@@ -56,7 +56,7 @@ defmodule Practice.Calc do
 
   defp eval([], stack) do
     case length(stack) do 
-        1 -> hd(stack)
+        1 -> parse_float(hd(stack))
         _ -> :error
     end
   end
